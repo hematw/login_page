@@ -1,0 +1,204 @@
+@font-face {
+  font-family: Poppins;
+  src: url(fonts/Poppins-Medium.ttf);
+}
+
+@font-face {
+  font-family: Poppins2;
+  font-weight: 700;
+  src: url(fonts/Poppins-Bold.ttf);
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: Poppins, sans-serif;
+}
+
+body {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: url(img/background.jpg);
+  height: 100vh;
+  background-size: cover;
+  background-position: center;
+}
+
+.header {
+  position: fixed;
+  top: 0;
+  right: 0;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 15px 10%;
+  z-index: 100;
+  color: #f6374b;
+}
+
+.header h2 {
+  font-size: 25px;
+  font-family: Poppins2, sans-serif;
+}
+
+nav a {
+  position: relative;
+  color: #f6374b;
+  text-decoration: none;
+  margin-left: 40px;
+  font-weight: 500;
+  font-size: 1.1em;
+}
+
+nav .btnlogin-popup {
+  width: 130px;
+  height: 50px;
+  cursor: pointer;
+  border: 2px solid#F6374B;
+  border-radius: 6px;
+  padding: 10px 20px;
+  color: #f6374b;
+  background-color: transparent;
+  margin-left: 40px;
+  font-size: 1.1em;
+  transition: 0.3s;
+}
+
+nav a::before {
+  content: "";
+  position: absolute;
+  bottom: -6px;
+  left: 0;
+  width: 100%;
+  height: 3px;
+  background-color: #f6374b;
+  border-radius: 5px;
+  transform: scaleX(0);
+  transition: transform 0.5s;
+  transform-origin: right;
+}
+
+nav a:hover::before {
+  transform: scaleX(1);
+  transform-origin: left;
+}
+
+nav .btnlogin-popup:hover {
+  color: #e3e2e9;
+  background-color: #f6374b;
+}
+
+.login-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  width: 400px;
+  height: 440px;
+  border: 3px solid rgba(240, 27, 73, 0.5);
+  border-radius: 20px;
+  backdrop-filter: blur(20px);
+}
+
+.login-container h2 {
+  font-size: 2em;
+  text-align: center;
+  color: #f6374b;
+}
+
+.input-box {
+  position: relative;
+  width: 100%;
+  height: 50px;
+  border-bottom: 2px solid #f6374b;
+  margin: 30px 0;
+}
+
+.input-box label {
+  position: absolute;
+  top: 50%;
+  left: 5px;
+  transform: translateY(-50%);
+  font-size: 1em;
+  color: #f6374b;
+  font-weight: 500;
+  pointer-events: none;
+  transition: 0.3s;
+}
+
+/* General Sibling Selector (~)
+The general sibling selector selects all elements 
+that are next siblings of a specified element. */
+
+.input-box input:focus ~ label,
+.input-box input:valid ~ label {
+  top: -5px;
+}
+
+.input-box input {
+  width: 100%;
+  height: 100%;
+  background-color: transparent;
+  outline: none;
+  border: none;
+  font-size: 1em;
+  color: #f6374b;
+  font-family: Poppins2, sans-serif;
+  padding: 0 35px 0 5px;
+}
+
+.forgot-pass {
+  display: flex;
+  justify-content: space-between;
+  font-size: 0.8em;
+  color: #f6374b;
+  margin: -15px 0 15px;
+}
+
+.forgot-pass input {
+  accent-color: #f6374b;
+  margin-right: 3px;
+}
+
+.forgot-pass a {
+  color: #f6374b;
+  text-decoration: none;
+  font-family: Poppins2, sans-serif;
+}
+
+.forgot-pass a:hover {
+  text-decoration: underline;
+}
+
+form .btn {
+  width: 100%;
+  height: 45px;
+  background-color: #f6374b;
+  border: none;
+  outline: none;
+  border-radius: 5px;
+  font-size: 1em;
+  cursor: pointer;
+  color: #e3e2e9;
+  margin-bottom: 10px;
+}
+
+.register {
+  display: flex;
+  justify-content: space-between;
+  color: #f6374b;
+  font-size: 0.8em;
+}
+
+.register a {
+  color: #f6374b;
+  text-decoration: none;
+  font-family: Poppins2, sans-serif;
+}
+
+.register a:hover {
+  text-decoration: underline;
+}
